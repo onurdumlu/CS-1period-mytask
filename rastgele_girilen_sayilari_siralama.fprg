@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ORTAPC3"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-21 03:25:46 &#214;S"/>
+        <attribute name="created" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAzOjAxOjMyIMOWUzsyNzMy"/>
+        <attribute name="edited" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAzOjI1OjQ2IMOWUzsxOzI4NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="uzunluk, i, j, k, l, m, n, secim, tutucu" type="Integer" array="False" size=""/>
+            <output expression="&quot;Dizi boyutu nedir?&quot;" newline="True"/>
+            <input variable="uzunluk"/>
+            <declare name="Array" type="Integer" array="True" size="uzunluk"/>
+            <for variable="i" start="0" end="uzunluk-1" direction="inc" step="1">
+                <output expression="&quot;Say&#305;lar&#305; teker teker giriniz&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <output expression="&quot;B&#252;y&#252;kten K&#252;&#231;&#252;&#287;e s&#305;ralamak i&#231;in 1, K&#252;&#231;&#252;kten b&#252;y&#252;&#287;e s&#305;ralamak i&#231;in 2 ye bas&#305;n&quot;" newline="True"/>
+            <input variable="secim"/>
+            <if expression="secim==1">
+                <then>
+                    <for variable="k" start="0" end="uzunluk" direction="inc" step="1">
+                        <for variable="j" start="0" end="uzunluk-2" direction="inc" step="1">
+                            <if expression="Array[j]&gt;Array[j+1]">
+                                <then/>
+                                <else>
+                                    <assign variable="tutucu" expression="Array[j]"/>
+                                    <assign variable="Array[j]" expression="Array[j+1]"/>
+                                    <assign variable="Array[j+1]" expression="tutucu"/>
+                                </else>
+                            </if>
+                        </for>
+                    </for>
+                </then>
+                <else/>
+            </if>
+            <if expression="secim==2">
+                <then>
+                    <for variable="l" start="0" end="uzunluk" direction="inc" step="1">
+                        <for variable="m" start="0" end="uzunluk-2" direction="inc" step="1">
+                            <if expression="Array[m]&gt;Array[m+1]">
+                                <then/>
+                                <else>
+                                    <assign variable="tutucu" expression="Array[m]"/>
+                                    <assign variable="Array[m]" expression="Array[m+1]"/>
+                                    <assign variable="Array[m]" expression="tutucu"/>
+                                </else>
+                            </if>
+                        </for>
+                    </for>
+                </then>
+                <else/>
+            </if>
+            <for variable="n" start="0" end="uzunluk-1" direction="inc" step="1">
+                <output expression="&quot;&quot; &amp;Array[n]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
