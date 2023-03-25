@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ORTAPC3"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-21 01:39:29 &#214;S"/>
+        <attribute name="created" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAxOjMwOjI3IMOWUzsyNzM2"/>
+        <attribute name="edited" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAxOjM5OjI5IMOWUzsxOzI4NTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, j, Toplam" type="Integer" array="False" size=""/>
+            <assign variable="Toplam" expression="0"/>
+            <output expression="&quot;KA&#199; SAYI G&#304;R&#304;CEKS&#304;N&#304;Z?&quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="Array" type="Integer" array="True" size="N"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="&quot;Say&#305;lar&#305; teker teker giriniz&quot;" newline="True"/>
+                <input variable="Array[i]"/>
+            </for>
+            <for variable="j" start="0" end="N-1" direction="inc" step="1">
+                <assign variable="Toplam" expression="Toplam+Array[j]"/>
+            </for>
+            <output expression="&quot;ORTALAMA:&quot;&amp;Toplam/N" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
