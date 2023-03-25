@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ORTAPC3"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-21 01:23:36 &#214;S"/>
+        <attribute name="created" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAxOjE3OjA3IMOWUzsyNzM5"/>
+        <attribute name="edited" value="T1JUQVBDMzvDlkdSMTVCTUxBQjsyMDIyLTEyLTIxOzAxOjIzOjM2IMOWUzsxOzI4NDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="X, Y, Z, BUYUK" type="Integer" array="False" size=""/>
+            <output expression="&quot;1. SAYIYI G&#304;R&#304;N&#304;Z&quot;" newline="True"/>
+            <input variable="X"/>
+            <output expression="&quot;2. SAYIYI G&#304;R&#304;N&#304;Z&quot;" newline="True"/>
+            <input variable="Y"/>
+            <output expression="&quot;3. SAYIYI G&#304;R&#304;N&#304;Z&quot;" newline="True"/>
+            <input variable="Z"/>
+            <assign variable="BUYUK" expression="X"/>
+            <if expression="BUYUK&lt;Y">
+                <then>
+                    <assign variable="BUYUK" expression="Y"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="BUYUK&lt;Z">
+                <then>
+                    <assign variable="BUYUK" expression="Z"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&quot;&amp;BUYUK" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
